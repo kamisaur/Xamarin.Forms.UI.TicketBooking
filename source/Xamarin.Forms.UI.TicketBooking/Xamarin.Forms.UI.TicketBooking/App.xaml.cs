@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Ubuntu-Bold.ttf", Alias = "UbuntuBold")]
 namespace Xamarin.Forms.UI.TicketBooking
 {
     public partial class App : Application

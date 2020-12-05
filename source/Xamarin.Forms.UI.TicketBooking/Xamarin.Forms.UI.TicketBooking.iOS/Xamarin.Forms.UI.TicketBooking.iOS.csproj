@@ -123,8 +123,11 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1709-pre4" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="CardsView">
+      <Version>2.6.8</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -132,5 +135,19 @@
       <Project>{AD4C112D-F532-42E7-AD62-72322789C717}</Project>
       <Name>Xamarin.Forms.UI.TicketBooking</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\onceuponatime%403x.png" />
+    <BundleResource Include="Resources\onceuponatime%402x.png" />
+    <BundleResource Include="Resources\tenet%403x.png" />
+    <BundleResource Include="Resources\onceuponatime.png" />
+    <BundleResource Include="Resources\avengers%403x.png" />
+    <BundleResource Include="Resources\grinch%403x.png" />
+    <BundleResource Include="Resources\tenet%402x.png" />
+    <BundleResource Include="Resources\avengers%402x.png" />
+    <BundleResource Include="Resources\grinch%402x.png" />
+    <BundleResource Include="Resources\tenet.png" />
+    <BundleResource Include="Resources\grinch.png" />
+    <BundleResource Include="Resources\avengers.png" />
   </ItemGroup>
 </Project>

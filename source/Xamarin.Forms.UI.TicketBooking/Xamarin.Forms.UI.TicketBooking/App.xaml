@@ -4,5 +4,9 @@
              x:Class="Xamarin.Forms.UI.TicketBooking.App">
     <Application.Resources>
 
+        <Style x:Key="MainLabelStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="UbuntuBold"/>
+        </Style>
+
     </Application.Resources>
 </Application>

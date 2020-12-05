@@ -1,24 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xamarin.Forms.UI.TicketBooking.MainPage">
+<ContentPage
+    x:Class="Xamarin.Forms.UI.TicketBooking.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <ContentPage.Resources>
+        <x:Array x:Key="images" Type="{x:Type x:String}">
+            <x:String>avengers</x:String>
+            <x:String>grinch</x:String>
+            <x:String>onceuponatime</x:String>
+            <x:String>tenet</x:String>
+        </x:Array>
+
+
+        <DataTemplate x:Key="carouselTemplate">
+            <ContentView>
+                <Frame
+                    Padding="0"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HasShadow="false"
+                    IsClippedToBounds="true"
+                    CornerRadius="10">
+
+                    <Image Source="{Binding .}" />
+                </Frame>
+            </ContentView>
+        </DataTemplate>
+
+    </ContentPage.Resources>
+
+
+    <Grid BackgroundColor="Bisque">
+
+
+        <Grid RowDefinitions="1*, 1*, 1*, 3*" Margin="0,50,0,0" >
+
+            <Frame
+                Grid.Row="1"
+                Grid.RowSpan="3"
+                Margin="40,50"
+                BackgroundColor="White"
+                HasShadow="False"
+                CornerRadius="6" />
+
+            <cards:CoverFlowView
+                Grid.RowSpan="3"
+                PositionShiftValue="90"
+                ItemsSource="{StaticResource images}"
+                ItemTemplate="{StaticResource carouselTemplate}">
+
+                
+                <!--<x:Arguments>
+                    <proc:CoverFlowProcessor ScaleFactor="0.75" OpacityFactor="0.25" />
+                 </x:Arguments>-->
+
+            </cards:CoverFlowView>
+        </Grid>
+
+
+
+    </Grid>
 
 </ContentPage>
