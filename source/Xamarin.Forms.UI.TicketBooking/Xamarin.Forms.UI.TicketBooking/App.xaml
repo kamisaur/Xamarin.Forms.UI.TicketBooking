@@ -8,5 +8,9 @@
             <Setter Property="FontFamily" Value="UbuntuBold"/>
         </Style>
 
+        <Style x:Key="MainButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="UbuntuBold"/>
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -24,6 +24,7 @@ namespace Xamarin.Forms.UI.TicketBooking.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Sharpnado.Shades.iOS.iOSShadowsRenderer.Initialize();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             LoadApplication(new App());
 
